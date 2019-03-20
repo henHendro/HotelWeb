@@ -1,4 +1,4 @@
-<?php include 'header.php';?>
+{% include 'indexSite/header.php' %}
 <div class="container">
 
        <h1 class="title">Introduction</h1>
@@ -17,4 +17,4 @@
 
 
 </div>
-<?php include 'footer.php';?>
+{% include 'indexSite/footer.php' %}

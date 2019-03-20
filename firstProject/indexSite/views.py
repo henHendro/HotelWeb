@@ -11,3 +11,6 @@ def Gallery(request):
 # show room tarif
 def roomsTariff(request):
     return render(request, 'indexSite/rooms-tariff.php')
+
+def introduction(request):
+    return render(request, 'indexSite/introduction.php')
