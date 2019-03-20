@@ -7,5 +7,6 @@ def index(request):
 def Gallery(request):
     return render(request, 'indexSite/gallery.php')
 
+# show room tarif
 def roomsTariff(request):
     return render(request, 'indexSite/rooms-tariff.php')
