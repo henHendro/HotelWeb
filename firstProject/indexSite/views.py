@@ -4,6 +4,7 @@ from django.shortcuts import render
 def index(request):
     return render(request, 'indexSite/index.php')
 
+# show gallery
 def Gallery(request):
     return render(request, 'indexSite/gallery.php')
 
