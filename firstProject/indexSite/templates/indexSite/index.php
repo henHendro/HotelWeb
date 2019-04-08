@@ -22,7 +22,9 @@
 <div id="information" class="spacer reserve-info ">
 <div class="container">
 <div class="row">
-
+<div class="col-sm-7 col-md-8">
+    
+</div>
 <div class="col-sm-5 col-md-4">
 <h3>Reservation</h3>
     <form role="form" class="wowload fadeInRight">
