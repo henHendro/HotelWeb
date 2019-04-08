@@ -1,8 +1,15 @@
 from django.shortcuts import render
+from datetime import datetime
 
 # Create your views here.
 def index(request):
-    return render(request, 'indexSite/index.php')
+    items = "cuma test"
+    context={
+        'items' : items,
+        'range' : [1,2,3,4,5],
+        'dateNow' : datetime.today()
+        }
+    return render(request, 'indexSite/index.php', context)
 
 # show gallery
 def Gallery(request):
