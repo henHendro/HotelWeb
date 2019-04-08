@@ -8,7 +8,7 @@
     <div class="welcome-message">
         <div class="wrap-info">
             <div class="information">
-                <h1  class="animated fadeInDown">Best hotel in Dubai</h1>
+                <h1  class="animated fadeInDown">Best hotel in Bunda Mulia</h1>
                 <p class="animated fadeInUp">Most luxurious hotel of asia with the royal treatments and excellent customer service.</p>                
             </div>
             <a href="#information" class="arrow-nav scroll wowload fadeInDownBig"><i class="fa fa-angle-down"></i></a>
@@ -22,9 +22,7 @@
 <div id="information" class="spacer reserve-info ">
 <div class="container">
 <div class="row">
-<div class="col-sm-7 col-md-8">
-    <div class="embed-responsive embed-responsive-16by9 wowload fadeInLeft"><iframe  class="embed-responsive-item" src="//player.vimeo.com/video/55057393?title=0" width="100%" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-</div>
+
 <div class="col-sm-5 col-md-4">
 <h3>Reservation</h3>
     <form role="form" class="wowload fadeInRight">
