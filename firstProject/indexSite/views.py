@@ -4,13 +4,30 @@ from .forms import BookingForms
 
 # Create your views here.
 def index(request):
+    error = ''
+    data = {}
     if request.method == 'POST':
-        print(request.POST.get('name'))
-    forms = BookingForms()
+        
+        data["name"] = request.POST.get("name")
+        data["email"] = request.POST.get("email")
+        data["phone"] = request.POST.get("phone")
+        data["numrooms"] = request.POST.get("numrooms")
+        data["numadults"] = request.POST.get("numadults")
+        data["datein"] = request.POST.get("dateBookIn")
+        data["dateout"] = request.POST.get("dateBookOut")
+        if (data["name"] == '' or data["email"] == '' or data["phone"] == '' or data["numrooms"] == '' or 
+            data["numadults"] == '' or data["datein"] == '' or data["dateout"] == ''):
+            error = "*Data tidak komplit"
+        else:
+            data.clear()
+        
+    #forms = BookingForms()
     context={ 
         'range' : [1,2,3,4,5],
         'dateNow' : datetime.today(),
-        'forms' : forms
+        'error' : error,
+        'data': data,
+        #'forms' : forms
         }
     return render(request, 'indexSite/index.php', context)
 

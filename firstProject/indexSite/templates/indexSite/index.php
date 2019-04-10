@@ -27,37 +27,50 @@
 </div>
 <div class="col-sm-5 col-md-4">
 <h3>Reservation</h3>
-    <form role="form" class="wowload fadeInRight" method="POST">
+    <form role="form" action="{% url 'home' %}" class="wowload fadeInRight" method="POST">
         {% csrf_token %}
        <!-- {% for field in forms %}
             <div class="form-group">
                 {{ field }}
             </div>
         {% endfor %} --> 
+        {% if error != '' %}
+            <div class="alert alert-danger">
+                <span>{{ error }}</span>
+             </div>
+        {% endif %}
         <div class="form-group">
-            <input type="text" class="form-control" name="name" placeholder="Name">
+            <input type="text" class="form-control" value="{{ data.name }}" name="name" placeholder="Name">
         </div>
         <div class="form-group">
-            <input type="email" class="form-control" name="email"  placeholder="Email">
+            <input type="email" class="form-control" name="email" value="{{ data.email }}" placeholder="Email">
         </div>
         <div class="form-group">
-            <input type="Phone" class="form-control" name="phone"  placeholder="Phone">
+            <input type="Phone" class="form-control" name="phone" value="{{ data.phone }}" placeholder="Phone">
         </div>        
         <div class="form-group">
             <div class="row">
             <div class="col-xs-6">
             <select class="form-control" name="numrooms">
-              <option>No. of Rooms</option>
+              <option value=''>No. of Rooms</option>
               {% for i in range %}
-                <option value="{{ i }}">{{ i }}</option>
+              {% if data.numrooms == i %}
+                    <option value="{{ i }}" selected>{{ i }}</option>
+                {% else %}
+                    <option value="{{ i }}">{{ i }}</option>
+                {% endif %}
               {% endfor %}
             </select>
             </div>        
             <div class="col-xs-6">
             <select class="form-control" name="numadults">
-              <option>No. of Adult</option>
+              <option value=''>No. of Adult</option>
               {% for i in range %}
-                <option value="{{ i }}">{{ i }}</option>
+                {% if data.numadults == i %}
+                    <option value="{{ i }}" selected>{{ i }}</option>
+                {% else %}
+                    <option value="{{ i }}">{{ i }}</option>
+                {% endif %}
               {% endfor %}
             </select>
             </div></div>
@@ -75,10 +88,10 @@
         <div class="form-group" >
             <div class="row">
             <div class="col-xs-6">
-                <input  type="date" name="dateBookIn" min="{{ dateNow }}">
+                <input  type="date" name="dateBookIn" min="{{ dateNow }}" value="{{ data.datein }}">
             </div>
             <div class="col-xs-6">
-                <input  type="date" name="dateBookOut" min="{{ dateNow }}">
+                <input  type="date" name="dateBookOut" min="{{ dateNow }}" value="{{ data.dateout }}">
             </div>
             </div>
         </div>        
@@ -89,8 +102,6 @@
 </div>
 </div>
 <!-- reservation-information -->
-
-
 
 <!-- services -->
 <div class="spacer services wowload fadeInUp">
