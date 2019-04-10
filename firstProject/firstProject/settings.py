@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'indexSite.apps.IndexsiteConfig',
+    'crispy_forms'
 ]
 
 MIDDLEWARE = [
@@ -78,6 +79,11 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        #'NAME': 'hotelBooking',
+        #'USER': 'root',
+        #'PASSWORD': '',
+        #'HOST': 'localhost',
+        #'PORT': '3306'
     }
 }
 

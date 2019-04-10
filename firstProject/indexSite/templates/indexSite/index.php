@@ -1,6 +1,6 @@
 {% include 'indexSite/header.php' %}
 {% load static %}
-
+{% load crispy_forms_tags %}
 
 <!-- banner -->
 <div class="banner">    	   
@@ -27,31 +27,37 @@
 </div>
 <div class="col-sm-5 col-md-4">
 <h3>Reservation</h3>
-    <form role="form" class="wowload fadeInRight">
+    <form role="form" class="wowload fadeInRight" method="POST">
+        {% csrf_token %}
+       <!-- {% for field in forms %}
+            <div class="form-group">
+                {{ field }}
+            </div>
+        {% endfor %} --> 
         <div class="form-group">
-            <input type="text" class="form-control"  placeholder="Name">
+            <input type="text" class="form-control" name="name" placeholder="Name">
         </div>
         <div class="form-group">
-            <input type="email" class="form-control"  placeholder="Email">
+            <input type="email" class="form-control" name="email"  placeholder="Email">
         </div>
         <div class="form-group">
-            <input type="Phone" class="form-control"  placeholder="Phone">
+            <input type="Phone" class="form-control" name="phone"  placeholder="Phone">
         </div>        
         <div class="form-group">
             <div class="row">
             <div class="col-xs-6">
-            <select class="form-control">
+            <select class="form-control" name="numrooms">
               <option>No. of Rooms</option>
               {% for i in range %}
-                <option>{{ i }}</option>
+                <option value="{{ i }}">{{ i }}</option>
               {% endfor %}
             </select>
             </div>        
             <div class="col-xs-6">
-            <select class="form-control">
+            <select class="form-control" name="numadults">
               <option>No. of Adult</option>
               {% for i in range %}
-                <option>{{ i }}</option>
+                <option value="{{ i }}">{{ i }}</option>
               {% endfor %}
             </select>
             </div></div>
@@ -75,10 +81,7 @@
                 <input  type="date" name="dateBookOut" min="{{ dateNow }}">
             </div>
             </div>
-        </div>
-        <div class="form-group">
-            <textarea class="form-control"  placeholder="Message" rows="4"></textarea>
-        </div>
+        </div>        
         <button class="btn btn-default">Submit</button>
     </form>    
 </div>
@@ -146,6 +149,11 @@
 </div>
 </div>
 <!-- services -->
-
+<script>
+    $('.datepicker').datepicker({
+        format: 'mm/dd/yyyy',
+        startDate: '-3d'
+    })
+</script>
 
 {% include 'indexSite/footer.php' %}

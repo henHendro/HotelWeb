@@ -65,6 +65,7 @@
 
 
 
+
 <script src="{% static 'indexSite/assets/jquery.js' %}"></script>
 
 <!-- wow script -->
@@ -76,6 +77,8 @@
 
 <!-- boostrap -->
 <script src="{% static 'indexSite/assets/bootstrap/js/bootstrap.js' %}" type="text/javascript" ></script>
+
+
 
 <!-- jquery mobile -->
 <script src="{% static 'indexSite/assets/mobile/touchSwipe.min.js' %}"></script>
@@ -89,12 +92,6 @@
 
 <!-- custom script -->
 <script src="{% static 'indexSite/assets/script.js' %}"></script>
-
-
-
-
-
-
 
 
 

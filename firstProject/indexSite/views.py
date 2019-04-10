@@ -1,13 +1,16 @@
 from django.shortcuts import render
 from datetime import datetime
+from .forms import BookingForms
 
 # Create your views here.
 def index(request):
-    items = "cuma test"
-    context={
-        'items' : items,
+    if request.method == 'POST':
+        print(request.POST.get('name'))
+    forms = BookingForms()
+    context={ 
         'range' : [1,2,3,4,5],
-        'dateNow' : datetime.today()
+        'dateNow' : datetime.today(),
+        'forms' : forms
         }
     return render(request, 'indexSite/index.php', context)
 

@@ -7,6 +7,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title>Holiday UBM | Best hotel in Bunda Mulia</title>
 
+
+<script src="{% static 'indexSite/assets/jquery-3.3.1.js' %}"></script>
+<script src="{% static 'indexSite/assets/jquery-ui.js' %}"></script>
+
+
+
 <!-- Google fonts -->
 <link href='http://fonts.googleapis.com/css?family=Raleway:300,500,800|Old+Standard+TT' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Raleway:300,500,800' rel='stylesheet' type='text/css'>
@@ -17,6 +23,8 @@
 
 <!-- bootstrap -->
 <link rel="stylesheet" href="{% static 'indexSite/assets/bootstrap/css/bootstrap.min.css' %}" />
+<link rel="stylesheet" href="{% static 'indexSite/assets/bootstrap/css1/bootstrap-datepicker.css' %}" />
+
 
 <!-- uniform -->
 <link type="text/css" rel="stylesheet" href="{% static 'indexSite/assets/uniform/css/uniform.default.min.css' %}" />
@@ -35,14 +43,7 @@
 
 <link rel="stylesheet" href="{% static 'indexSite/assets/style.css' %}">
 
-<!-- js 
-<script src="{% static 'indexSite/assets/jquery.js' %}"></script>
-<script src="{% static 'indexSite/assets/uniform/js/jquery.uniform.js' %}"></script>
-<script src="{% static 'indexSite/assets/bootstrap/js/bootstrap.js' %}" type="text/javascript"></script>
-<script src="{% static 'indexSite/assets/gallery/jquery.blueimp-gallery.min.js' %}"></script>
-<script src="{% static 'indexSite/assets/script.js' %}"></script>
-<script src="{% static 'indexSite/assets/respond/respond.js' %}"></script>
-<script src="{% static 'indexSite/assets/mobile/touchSwipe.min.js' %}"></script>-->
+
 
 </head>
 
