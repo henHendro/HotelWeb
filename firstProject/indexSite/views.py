@@ -21,6 +21,7 @@ def index(request):
         else:
             data.clear()
         
+    #menambahkan contoh disini
     #forms = BookingForms()
     context={ 
         'range' : [1,2,3,4,5],
